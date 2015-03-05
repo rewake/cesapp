@@ -10,6 +10,19 @@
 |
 */
 
+$hook['post_controller_constructor'] = array(
+    'class'    => 'Template_hooks',
+    'function' => 'header',
+    'filename' => 'templates.php',
+    'filepath' => 'hooks'
+);
+
+$hook['post_controller'] = array(
+    'class'    => 'Template_hooks',
+    'function' => 'footer',
+    'filename' => 'templates.php',
+    'filepath' => 'hooks'
+);
 
 
 /* End of file hooks.php */
