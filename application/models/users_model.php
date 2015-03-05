@@ -11,7 +11,8 @@ class Users_model extends CI_Model
 	public function read($u = null)
 	{
 		$this->db
-			->select('*')
+			->select('name_full, email, fav_color')
+            ->select('date_format(`dob`, "%W, %M %e, %Y") as `dob`', false)
 			->from('user_info');
 		
 		if (isset($u) && !empty($u))
@@ -24,7 +25,7 @@ class Users_model extends CI_Model
 		
 		$qry = $this->db->get();
 		
-		return $qry->row_array();
+		return $qry->result_array();
 	}
 	
 	public function update()

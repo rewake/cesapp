@@ -10,7 +10,7 @@
 |
 */
 
-$hook['post_controller_constructor'] = array(
+$hook['post_controller_constructor'][] = array(
     'class'    => 'Template_hooks',
     'function' => 'header',
     'filename' => 'templates.php',

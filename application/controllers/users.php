@@ -4,9 +4,10 @@ class Users extends CI_Controller
 {
 	public function index()
 	{
+        $data['page_header'] = "User List";
 		$data['users'] = $this->Users_model->read();
-		
-		$this->load->view('user_list', $data);
+
+		$this->parser->parse('user_list', $data);
 	}
 	
 	public function create()
@@ -30,7 +31,7 @@ class Users extends CI_Controller
 	
 	public function update()
 	{
-		
+
 	}
 	
 	public function delete($u = null)

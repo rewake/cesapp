@@ -2,13 +2,22 @@
 
 class Template_hooks extends CI_Controller
 {
+
     public function header()
     {
-        $this->load->view('templates/header');
+        if ($this->useTemplates())
+            $this->load->view('templates/header');
     }
 
     public function footer()
     {
-        $this->load->view('templates/footer');
+        if ($this->useTemplates())
+            $this->load->view('templates/footer');
+    }
+
+    protected function useTemplates()
+    {
+        // This is a bit flawed, but will work for this test app
+        return $this->uri->segment(1) != 'ajax';
     }
 }
