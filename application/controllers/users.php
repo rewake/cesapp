@@ -12,11 +12,13 @@ class Users extends CI_Controller
 	
 	public function create()
 	{
-		
+		$this->Users_model->create();
 	}
 	
 	public function detail($u = null)
 	{
+		$data['page_header'] = "User Detail";
+		
 		if (!isset($u) || empty($u))
 		{
 			$data['user'] = false;

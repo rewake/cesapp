@@ -3,6 +3,11 @@ body {
     padding-bottom: 30px;
 }
 
+input {
+	display:block;
+	clear:both !important;
+}
+
 .theme-dropdown .dropdown-menu {
     position: static;
     display: block;
@@ -15,4 +20,17 @@ body {
 
 .theme-showcase .navbar .container {
     width: auto;
+}
+
+a.navbar-brand {
+	color:#00acea !important;
+}
+
+a.navbar-brand:hover {
+	color:#fff !important;
+	background-color:#00acea !important;
+}
+
+.row {
+	margin-bottom:10px !important;
 }

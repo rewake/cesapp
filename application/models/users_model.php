@@ -5,7 +5,16 @@ class Users_model extends CI_Model
 	
 	public function create()
 	{
+		$insData = array(
+			'name_full'	=> $this->input->post('name_full'),
+			'dob'		=> $this->input->post('dob'),
+			'email'		=> $this->input->post('email'),
+			'fav_color'	=> $this->input->post('fav_color'),
+			'date_created' => date("Y-m-d H:i:s")
+		);
 		
+		// TODO: load view / push to new route
+		return $this->db->insert('user_info', $insData);
 	}
 	
 	public function read($u = null)
@@ -17,9 +26,6 @@ class Users_model extends CI_Model
 		
 		if (isset($u) && !empty($u))
 		{
-			// FYI: I tend to change id field names when they'll be visible
-			// in URLs for added security - so the actual field name won't 
-			// be readily given out to the world. 
 			$this->db->where(array('uid' => $u));
 		}
 		
@@ -35,6 +41,6 @@ class Users_model extends CI_Model
 	
 	public function delete()
 	{
-		
+		return $this->db->delete('user_info', array('uid' => $this->input->post('u')));
 	}
 }

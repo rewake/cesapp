@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "welcome"; // Leaving default route in this case, modifying view instead.
+$route['default_controller'] = "users";
 $route['404_override'] = '';
 
 
