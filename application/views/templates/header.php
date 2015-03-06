@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CES Test App</title>
+    <title>CES Application Test</title>
 
     <!-- CSS Includes -->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/black-tie/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/dot-luv/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/css/ces.css">
@@ -21,7 +21,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">CES App Test</a>
+                <a class="navbar-brand" href="/">CES Application Test</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">

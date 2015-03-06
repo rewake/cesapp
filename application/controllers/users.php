@@ -2,7 +2,13 @@
 
 class Users extends CI_Controller
 {
-	public function index()
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->library('form_validation');
+    }
+
+    public function index()
 	{
         $data['page_header'] = "User List";
 		$data['users'] = $this->Users_model->read();
@@ -12,7 +18,18 @@ class Users extends CI_Controller
 	
 	public function create()
 	{
-		$this->Users_model->create();
+        $this->form_validation->set_rules('name_full', 'Name', 'required');
+        $this->form_validation->set_rules('fav_color', 'Favorite Color', 'required');
+
+        // Validate Form Data
+        if ($this->form_validation->run() == FALSE)
+        {
+            echo 'Sorry, frontend says "Name" and "Favorite Color" aren\'t required, but the backend says they are!  ;)';
+        }
+        else
+        {
+		    echo $this->Users_model->create();
+        }
 	}
 	
 	public function detail($u = null)
@@ -38,6 +55,6 @@ class Users extends CI_Controller
 	
 	public function delete($u = null)
 	{
-		
+		$this->Users_model->delete($u);
 	}
 }

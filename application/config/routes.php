@@ -40,7 +40,7 @@
 
 $route['default_controller'] = "users";
 $route['404_override'] = '';
-
+$route['ajax/(:any)'] = '$1';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

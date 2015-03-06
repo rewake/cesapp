@@ -2,7 +2,6 @@
 
 class Template_hooks extends CI_Controller
 {
-
     public function header()
     {
         if ($this->useTemplates())

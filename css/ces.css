@@ -34,3 +34,27 @@ a.navbar-brand:hover {
 .row {
 	margin-bottom:10px !important;
 }
+
+.ui-datepicker {
+    font-size: .95em;
+}
+
+.ui-datepicker-month, .ui-datepicker-year {
+    color:black;
+}
+
+#dob-error,
+#email-error {
+    position:absolute;
+    background: red;
+    color:#fff;
+    padding:5px 10px;;
+    border-radius: 5px;
+    margin-top:3px;
+}
+
+.required:after {
+    content:" *";
+    color:red;
+    font-size:1.2em;
+}
